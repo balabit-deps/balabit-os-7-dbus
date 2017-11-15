@@ -1,0 +1,3 @@
+debian/session.conf-system.conf-include-legacy-files-as-.dpkg-ba.patch
+ubuntu/aa-get-connection-apparmor-security-context.patch
+ubuntu/dont-stop-dbus.patch
