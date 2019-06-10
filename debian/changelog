@@ -1,3 +1,19 @@
+dbus (1.12.2-1ubuntu1.1) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: DBUS_COOKIE_SHA1 implementation flaw
+    - d/p/0001-auth-Reject-DBUS_COOKIE_SHA1-for-users-other-than-th.patch:
+      reject DBUS_COOKIE_SHA1 for users other than the server owner in
+      dbus/dbus-auth.c.
+    - d/p/0002-test-Add-basic-test-coverage-for-DBUS_COOKIE_SHA1.patch:
+      add basic test coverage for DBUS_COOKIE_SHA1 in
+      dbus/dbus-auth-script.c, dbus/dbus-sysdeps-util-unix.c,
+      dbus/dbus-sysdeps-util-win.c, dbus/dbus-sysdeps.h, test/Makefile.am,
+      test/data/auth/cookie-sha1-username.auth-script,
+      test/data/auth/cookie-sha1.auth-script.
+    - CVE-2019-12749
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 10 Jun 2019 14:05:17 -0400
+
 dbus (1.12.2-1ubuntu1) bionic; urgency=medium
 
   * Sync with Debian. Remaining changes:
