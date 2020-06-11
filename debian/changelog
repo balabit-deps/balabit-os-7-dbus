@@ -1,3 +1,14 @@
+dbus (1.12.2-1ubuntu1.2) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: DoS via file descriptor leak
+    - debian/patches/CVE-2020-12049-1.patch: on MSG_CTRUNC, close the fds
+      we did receive in dbus/dbus-sysdeps-unix.c.
+    - debian/patches/CVE-2020-12049-2.patch: assert that we don't leak file
+      descriptors in test/fdpass.c.
+    - CVE-2020-12049
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 11 Jun 2020 14:25:30 -0400
+
 dbus (1.12.2-1ubuntu1.1) bionic-security; urgency=medium
 
   * SECURITY UPDATE: DBUS_COOKIE_SHA1 implementation flaw
